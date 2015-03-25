@@ -29,7 +29,20 @@
 	<hr />
 	<br class="clear" />
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-xs-6">
+				<%= link_to "Puff, puff, pass that sh*t.", "#", :class => 'next-quote' %>
+			</div>
+			<div class="col-xs-6 footer-blurb">
+				Made with <3 by <a href="http://allencoin.github.io">Allen Coin</a>.
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
