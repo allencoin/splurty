@@ -9,20 +9,22 @@
 <body>
 	<header>
 		<div class="col-xs-3">
-			<div class="circle">
-				<br />
-				Best
-				<br />
-				Rap
-				<br />
-				Puns
-			</div>
+			<%= link_to root_path, :class => 'logo' do %>
+				<div class="circle">
+					<br />
+					Best
+					<br />
+					Rap
+					<br />
+					Puns
+				</div>
+			<% end %>
 		</div>
 		<div class="col-xs-4 slogan">
 			Only the best rap puns – since 1993. Ya heard?
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', '#' %>
+			<%= link_to 'Contribute', new_quote_path %>
 			<%= link_to 'About', '#' %>
 		</div>
 	</header>
@@ -36,7 +38,7 @@
 	<div class="footer">
 		<div class="container">
 			<div class="col-xs-6">
-				<%= link_to "Puff, puff, pass that sh*t.", "#", :class => 'next-quote' %>
+				<%= link_to "Puff, puff, pass that sh*t.", root_path, :class => 'next-quote' %>
 			</div>
 			<div class="col-xs-6 footer-blurb">
 				Made with <3 by <a href="http://allencoin.github.io">Allen Coin</a>.
