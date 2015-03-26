@@ -24,10 +24,37 @@
 			Only the best rap puns – since 1993. Ya heard?
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', new_quote_path %>
+			<!-- button trigger modal -->
+			<%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
 			<%= link_to 'About', about_path %>
 		</div>
 	</header>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Drop Some Knowledge</h4>
+				</div>
+				<div class="modal-body">
+					<%= simple_form_for Quote.new do |f| %>
+					<div class="modal-body">
+						<%= f.input :saying %>
+						<%= f.input :author %>
+					</div>
+						<br />
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind</button>
+						<%= f.submit 'Drop The Mic', :class => 'btn btn-danger' %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<hr />
 	<br class="clear" />
 
