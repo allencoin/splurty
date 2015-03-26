@@ -8,7 +8,10 @@ class QuotesController < ApplicationController
 	end
 
 	def create
-		Quote.create(quote_params)
+		@quote = Quote.create(quote_params)
+		if @quote.invalid?
+			flash[:error] = '<strong>Naw...</strong> Make your quote between 3 and 140 characters. Just like twitter.<br>And make sure you spelled their name right. Don\'t be disrespectful.'
+		end
 		redirect_to root_path
 	end
 
