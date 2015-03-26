@@ -51,6 +51,7 @@ hr {
 
 h1 {
 	font-family: 'Bree Serif', serif;
+	font-size: 48px;
 }
 
 h2 {
@@ -77,4 +78,17 @@ h2 {
 
 .about {
 	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.modal {
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2 span {
+	color: #dddddd;
+	font-family: 'Bree Serif', serif;
+}
+
+::selection {
+	background-color: #FF6000;
 }

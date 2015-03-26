@@ -20,12 +20,13 @@
 				</div>
 			<% end %>
 		</div>
-		<div class="col-xs-4 slogan">
+		<div class="col-sm-4 hidden-xs slogan">
 			Only the best rap puns – since 1993. Ya heard?
 		</div>
-		<div class="col-xs-5 links">
+		<div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
 			<!-- button trigger modal -->
 			<%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
+			&nbsp; &nbsp;
 			<%= link_to 'About', about_path %>
 		</div>
 	</header>
@@ -36,17 +37,18 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Drop Some Knowledge</h4>
+					<h4 class="modal-title" id="myModalLabel">Spit Hot Fire</h4>
 				</div>
 				<div class="modal-body">
 					<%= simple_form_for Quote.new do |f| %>
 					<div class="modal-body">
-						<%= f.input :saying %>
-						<%= f.input :author %>
+						<%= f.input :saying, :label => "Take you on this lyrical high real quick:", :placeholder => "Real G\'s move in silence, like lasagna." %>
+						<br />
+						<%= f.input :author, :label => "From the philosopher known as:", :placeholder => "Weezy F Baby" %>
 					</div>
 						<br />
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind <em>(Cho-o-ke!)</em></button>
 						<%= f.submit 'Drop The Mic', :class => 'btn btn-danger' %>
 					</div>
 					<% end %>
@@ -69,10 +71,10 @@
 
 	<div class="footer">
 		<div class="container">
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-sm-6">
 				<%= link_to "Puff, puff, pass that sh*t.", root_path, :class => 'next-quote' %>
 			</div>
-			<div class="col-xs-6 footer-blurb">
+			<div class="col-xs-12 col-sm-6 footer-blurb">
 				Made with <3 by <a href="http://allencoin.github.io">Allen Coin</a>.
 			</div>
 		</div>
